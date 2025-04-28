@@ -1,0 +1,190 @@
+<!-- Laad TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Laad Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Eigen Styling -->
+<style>
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+.event-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #3b82f6;
+}
+
+.form-container {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+}
+
+.fade-in-iframe {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in-iframe.loaded {
+    opacity: 1;
+}
+</style>
+
+<!-- Hero Section -->
+<section class="hero-section flex items-center justify-center text-center text-white px-4">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Feest mee: 15 jaar OIT B.V.!</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Samen vieren we een mijlpaal aan het strand van Nulde Noord. Live muziek, heerlijk eten en onvergetelijke momenten. Meld je nu aan!</p>
+        <a href="#inschrijven" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block transform hover:scale-105">
+            Meld je aan
+        </a>
+    </div>
+</section>
+
+<!-- About Event Section -->
+<section class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Over het evenement</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Op zaterdag 13 september 2025 organiseert OIT B.V. een jubileumfestival aan het prachtige water van Strand Nulde Noord. Verwacht een avond vol live muziek, heerlijk eten, spectaculair entertainment en natuurlijk veel gezelligheid. Mis het niet!
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition duration-300">
+            <div class="event-icon">
+                <i class="far fa-calendar-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Datum</h3>
+            <p class="text-gray-600">Zaterdag 13 september 2025</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition duration-300">
+            <div class="event-icon">
+                <i class="far fa-clock"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Tijd</h3>
+            <p class="text-gray-600">17:00 – 22:00 uur</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition duration-300">
+            <div class="event-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Locatie</h3>
+            <p class="text-gray-600">
+                <a href="https://www.google.com/maps/place/Strand+Nulde+Noord" target="_blank" class="text-blue-600 hover:underline">Strand Nulde Noord</a>
+            </p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition duration-300">
+            <div class="event-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Wat je kunt verwachten</h3>
+            <p class="text-gray-600">Live muziek, eten, entertainment</p>
+        </div>
+    </div>
+</section>
+
+<!-- Registration Form Section -->
+<section id="inschrijven" class="py-16 px-4 bg-blue-50">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+            <!-- Afbeeldingen Links -->
+            <div class="lg:w-1/2 flex flex-col items-center gap-4">
+                <img src="https://oitbv.nl/site/media/upload/images/78340_oit-benjijerbij-a6-1-1_origineel_20250428105321.png" alt="OIT 15 jaar" class="rounded-lg shadow-lg">
+                <img src="https://oitbv.nl/site/media/upload/images/78341_oit-benjijerbij-a6-2-2_origineel_20250428111340.png" alt="Ben jij erbij?" class="rounded-lg shadow-lg">
+            </div>
+
+            <!-- Formulier Rechts -->
+            <div class="lg:w-1/2">
+                <!-- Desktop iframe -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnMVTTzQMq0ctShnq2ha8s8N7HjPHM7ksjWCnzzlOB401RrQ/viewform?embedded=true" width="100%" height="1600" class="hidden md:block rounded-lg fade-in-iframe" onload="this.classList.add('loaded')">
+                    Bezig met laden…
+                </iframe>
+                <!-- Mobiel iframe -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnMVTTzQMq0ctShnq2ha8s8N7HjPHM7ksjWCnzzlOB401RrQ/viewform?embedded=true" width="100%" height="1700" class="block md:hidden rounded-lg fade-in-iframe" onload="this.classList.add('loaded')">
+                    Bezig met laden…
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Agenda Buttons -->
+        <div class="text-center mt-12">
+            <h3 class="text-2xl font-bold mb-4">Zet het evenement in uw agenda!</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=15+jaar+OIT+B.V.+Jubileumfeest&dates=20250913T150000Z/20250913T200000Z&details=Feest+aan+het+Strand+Nulde+Noord%21&location=Strand+Nulde+Noord" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full font-semibold transition">Voeg toe aan Google Agenda</a>
+                <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:15%20jaar%20OIT%20B.V.%20Jubileumfeest%0ADESCRIPTION:Feest%20aan%20het%20Strand%20Nulde%20Noord!%0ALOCATION:Strand%20Nulde%20Noord%0ADTSTART:20250913T150000Z%0ADTEND:20250913T200000Z%0AEND:VEVENT%0AEND:VCALENDAR" download="OIT-Jubileum.ics" class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full font-semibold transition">Download voor andere agenda's</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Countdown Section -->
+<section class="py-12 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+    <div class="max-w-4xl mx-auto text-center px-4">
+        <h3 class="text-2xl font-bold mb-6">Nog maar even wachten tot het feest begint!</h3>
+        <div class="flex justify-center space-x-4 md:space-x-8">
+            <div class="text-center">
+                <div class="text-3xl md:text-5xl font-bold" id="countdown-days">00</div>
+                <div class="text-sm md:text-base">Dagen</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl md:text-5xl font-bold" id="countdown-hours">00</div>
+                <div class="text-sm md:text-base">Uren</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl md:text-5xl font-bold" id="countdown-minutes">00</div>
+                <div class="text-sm md:text-base">Minuten</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl md:text-5xl font-bold" id="countdown-seconds">00</div>
+                <div class="text-sm md:text-base">Seconden</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center space-y-6">
+        <div>
+            <h3 class="text-2xl font-bold mb-2">15 jaar OIT B.V.</h3>
+            <p class="text-gray-300 text-lg">Samen maken we er een onvergetelijk jubileum van!</p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-envelope text-blue-400"></i>
+                <a href="mailto:jubileum@oitrading.nl" class="hover:text-blue-300 transition">jubileum@oitrading.nl</a>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 pt-4">
+            <p class="text-gray-500 text-sm">&copy; 2025 OIT B.V. Alle rechten voorbehouden.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Countdown Script -->
+<script>
+function updateCountdown() {
+    const eventDate = new Date('September 13, 2025 17:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById('countdown-days').innerHTML = days.toString().padStart(2, '0');
+    document.getElementById('countdown-hours').innerHTML = hours.toString().padStart(2, '0');
+    document.getElementById('countdown-minutes').innerHTML = minutes.toString().padStart(2, '0');
+    document.getElementById('countdown-seconds').innerHTML = seconds.toString().padStart(2, '0');
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
