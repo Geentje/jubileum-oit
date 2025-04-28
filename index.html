@@ -187,4 +187,8 @@ function updateCountdown() {
 }
 setInterval(updateCountdown, 1000);
 updateCountdown();
+    window.addEventListener('load', function() {
+  const height = document.documentElement.scrollHeight;
+  window.parent.postMessage(height, '*');
+});
 </script>
